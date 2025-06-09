@@ -28,20 +28,20 @@ If you found this project useful, then please consider giving it a :star: on Git
 ## flutter pub get
 
 ## git init    
->> git add .
->> git commit -m "first commit"
->> git branch -M main
->> git remote add origin https://github.com/visheshasanadhya/newsApp.git
->> git push -u origin main
+## git add .
+## git commit -m "first commit"
+## git branch -M main
+## git remote add origin https://github.com/visheshasanadhya/newsApp.git
+## git push -u origin main
 
 
 ## flutter build web --release
 
 ## flutter build web --release --no-tree-shake-icons
 
-## git init
-## git remote set-url origin https://github.com/visheshasanadhya/newsApp.git
+## cd build/web>> git init
+## git remote add origin https://github.com/visheshasanadhya/newsApp.git
+## git checkout -b gh-pages
 ## git add .
-## git commit -m "Force push entire Flutter project to main"
-## git branch -M main
-## git push -f origin main
+## git commit -m "Deploy Flutter Web to GitHub Pages"
+## git push -f origin gh-pages
