@@ -21,6 +21,20 @@ If you found this project useful, then please consider giving it a :star: on Git
 
 ## flutter pub get
 
+## flutter build web --base-href "/newsApp/"
+
+## flutter clean
+
+## flutter pub get
+
+## git init    
+>> git add .
+>> git commit -m "first commit"
+>> git branch -M main
+>> git remote add origin https://github.com/visheshasanadhya/newsApp.git
+>> git push -u origin main
+
+
 ## flutter build web --release
 
 ## flutter build web --release --no-tree-shake-icons
