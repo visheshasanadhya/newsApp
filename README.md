@@ -39,7 +39,8 @@ If you found this project useful, then please consider giving it a :star: on Git
 
 ## flutter build web --release --no-tree-shake-icons
 
-## cd build/web>> git init
+## cd build/web
+## git init
 ## git remote add origin https://github.com/visheshasanadhya/newsApp.git
 ## git checkout -b gh-pages
 ## git add .
