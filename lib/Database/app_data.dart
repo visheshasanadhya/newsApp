@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_interpolation_to_compose_strings
-
 import 'package:news_app/Database/data_model.dart';
 import 'package:news_app/Helper/utility.dart';
 
@@ -200,7 +198,7 @@ class DataBase {
     return CountryDataModel(
             countryName: name,
             countryId: countryId,
-            countryFlag: AssetsPath.flags + name.toLowerCase() + '.png',
+            countryFlag: '${AssetsPath.flags}${name.toLowerCase()}.png',
             newsList: newslist)
         .toJson();
   }

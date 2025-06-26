@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors, unused_import, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, prefer_interpolation_to_compose_strings, unused_element, deprecated_member_use, prefer_final_fields, avoid_print, unused_field, curly_braces_in_flow_control_structures, unused_local_variable, use_super_parameters
-
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
@@ -8,7 +6,7 @@ import 'package:news_app/Helper/utility.dart';
 import 'package:translator/translator.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -95,7 +93,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget languagetranslate() {
     return Row(
       children: [
-        SizedBox(width: 15),
+        const SizedBox(width: 15),
         DropdownButtonHideUnderline(
           child: DropdownButton2(
             isExpanded: true,
@@ -132,7 +130,6 @@ class _HomeScreenState extends State<HomeScreen> {
               });
               for (int i = 0; i < items.entries.length; i++) {
                 if (items.entries.toList()[i].key == value) {
-                  print("i $i");
                   setState(() {
                     translatedIndex = i;
                     if (inputText.isNotEmpty) {
@@ -152,8 +149,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget enterText() {
     return Container(
-      padding: EdgeInsets.all(10),
-      margin: EdgeInsets.only(left: 15, right: 15, top: 25),
+      padding: const EdgeInsets.all(10),
+      margin: const EdgeInsets.only(left: 15, right: 15, top: 25),
       height: Get.height * 0.25,
       width: double.infinity,
       decoration: BoxDecoration(
@@ -184,15 +181,15 @@ class _HomeScreenState extends State<HomeScreen> {
         if (inputText.isNotEmpty) translate();
       },
       child: Container(
-        padding: EdgeInsets.all(5),
-        margin: EdgeInsets.only(top: 15),
+        padding: const EdgeInsets.all(5),
+        margin: const EdgeInsets.only(top: 15),
         height: 35,
         width: 110,
         decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(
                 color: AppColor.iconbgcolor,
-                offset: Offset(0, 2),
+                offset: const Offset(0, 2),
                 blurRadius: 10,
                 spreadRadius: 1.5),
           ],
@@ -207,16 +204,16 @@ class _HomeScreenState extends State<HomeScreen> {
                 fontFamily: AppFont.semibold,
               ),
             ),
-            Spacer(),
+            const Spacer(),
             _loading
                 ? Container(
-                    padding: EdgeInsets.all(4),
+                    padding: const EdgeInsets.all(4),
                     child: Image.asset(
-                      AssetsPath.home + 'loader_big.gif',
+                      '${AssetsPath.home}loader_big.gif',
                     ),
                   )
                 : Image.asset(
-                    AssetsPath.home + 'translate_small.png',
+                    '${AssetsPath.home}translate_small.png',
                   ),
           ],
         ),
@@ -229,8 +226,8 @@ class _HomeScreenState extends State<HomeScreen> {
     return Stack(
       children: [
         Container(
-          padding: EdgeInsets.all(10),
-          margin: EdgeInsets.only(left: 15, right: 15, top: 15),
+          padding: const EdgeInsets.all(10),
+          margin: const EdgeInsets.only(left: 15, right: 15, top: 15),
           height: Get.height * 0.25,
           width: double.infinity,
           decoration: BoxDecoration(
@@ -251,14 +248,14 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         Row(
           children: [
-            Spacer(),
+            const Spacer(),
             GestureDetector(
               onTap: () {
                 speak(
                     items.values.elementAt(translatedIndex!), transletedValue!);
               },
               child: Container(
-                  padding: EdgeInsets.all(9),
+                  padding: const EdgeInsets.all(9),
                   margin: EdgeInsets.only(top: Get.height * 0.2, right: 30),
                   height: 35,
                   width: 35,
@@ -269,7 +266,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: AppColor.containbgcolor,
                   ),
                   child: Center(
-                    child: Image.asset(AssetsPath.home + 'play.png'),
+                    child: Image.asset('${AssetsPath.home}play.png'),
                   )),
             ),
             GestureDetector(
@@ -277,7 +274,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 flutterTts.stop();
               },
               child: Container(
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   margin: EdgeInsets.only(top: Get.height * 0.2, right: 30),
                   height: 35,
                   width: 35,
@@ -288,7 +285,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: AppColor.containbgcolor,
                   ),
                   child: Center(
-                    child: Image.asset(AssetsPath.home + 'stop.png'),
+                    child: Image.asset('${AssetsPath.home}stop.png'),
                   )),
             ),
           ],

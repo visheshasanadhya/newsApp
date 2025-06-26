@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors, unused_import, sized_box_for_whitespace, prefer_interpolation_to_compose_strings, must_be_immutable, use_super_parameters
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:news_app/AllScreen/CountryList/country_list_controller.dart';
@@ -9,7 +7,7 @@ import 'package:news_app/Database/data_model.dart';
 import 'package:news_app/Helper/utility.dart';
 
 class CountryListView extends StatelessWidget {
-  CountryListView({Key? key}) : super(key: key);
+  CountryListView({super.key});
   DataBase countryData = DataBase();
   CountryController controller = Get.put(CountryController());
 
@@ -50,11 +48,10 @@ class CountryListView extends StatelessWidget {
       CountryDataModel countryData, BuildContext context, int index) {
     countryData.countryFlag;
     return Padding(
-      padding: EdgeInsets.only(left: 15, right: 15, bottom: 15),
+      padding: const EdgeInsets.only(left: 15, right: 15, bottom: 15),
       child: ListTile(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         tileColor: AppColor.iconbgcolor.withOpacity(0.6),
-        
         onTap: () {
           Get.to(NewsGridView(
             newslist: countryData.newsList!,

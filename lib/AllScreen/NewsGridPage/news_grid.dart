@@ -1,20 +1,16 @@
-// ignore_for_file: prefer_const_constructors, unused_import, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, prefer_interpolation_to_compose_strings, avoid_print, invalid_use_of_protected_member
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:news_app/AllScreen/CountryList/country_list_controller.dart';
 import 'package:news_app/AllScreen/NewsGridPage/news_card.dart';
 import 'package:news_app/Database/data_model.dart';
 import 'package:news_app/Helper/utility.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class NewsGridView extends StatefulWidget {
   final List<NewsDataModel> newslist;
   final int selctedcountryIndex;
 
   const NewsGridView(
-      {Key? key, required this.newslist, required this.selctedcountryIndex})
-      : super(key: key);
+      {super.key, required this.newslist, required this.selctedcountryIndex});
 
   @override
   State<NewsGridView> createState() => _NewsGridViewState();
@@ -31,12 +27,12 @@ class _NewsGridViewState extends State<NewsGridView> {
         child: Column(
           children: [
             GridView.builder(
-                padding:
-                    EdgeInsets.only(right: 15, left: 15, top: 15, bottom: 15),
+                padding: const EdgeInsets.only(
+                    right: 15, left: 15, top: 15, bottom: 15),
                 itemCount: widget.newslist.length,
                 shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                physics: const NeverScrollableScrollPhysics(),
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   mainAxisSpacing: 15,
                   crossAxisSpacing: 15,
@@ -67,9 +63,9 @@ class _NewsGridViewState extends State<NewsGridView> {
           Navigator.pop(context);
         },
         child: Padding(
-          padding: EdgeInsets.all(18),
+          padding: const EdgeInsets.all(18),
           child: Image.asset(
-            AssetsPath.home + 'backarrow.png',
+            '${AssetsPath.home}backarrow.png',
           ),
         ),
       ),
