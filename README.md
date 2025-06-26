@@ -39,9 +39,18 @@ If you found this project useful, then please consider giving it a :star: on Git
 
 ## flutter build web --release --no-tree-shake-icons
 
+<<<<<<< HEAD
 ## cd build/web>> git init
+=======
+## cd build/web
+## git init
+>>>>>>> 856644a5fc927e65594fbad535bad1b9b40d1624
 ## git remote add origin https://github.com/visheshasanadhya/newsApp.git
 ## git checkout -b gh-pages
 ## git add .
 ## git commit -m "Deploy Flutter Web to GitHub Pages"
+<<<<<<< HEAD
 ## git push -f origin gh-pages
+=======
+## git push -f origin gh-pages
+>>>>>>> 856644a5fc927e65594fbad535bad1b9b40d1624
