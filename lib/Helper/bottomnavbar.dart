@@ -4,8 +4,6 @@ import 'package:news_app/AllScreen/Favourit/favourite_screen.dart';
 import 'package:news_app/AllScreen/homescreen/homepage.dart';
 import 'package:news_app/Helper/utility.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent_bottom_nav_bar_v2.dart';
-import 'package:news_app/AllScreen/about_screen.dart';
-import 'package:news_app/AllScreen/contact_us_screen.dart';
 
 class PersistenBottomNavBar extends StatelessWidget {
   const PersistenBottomNavBar({super.key});
@@ -33,26 +31,6 @@ class PersistenBottomNavBar extends StatelessWidget {
           item: ItemConfig(
             icon: Image.asset('${AssetsPath.home}unfavorite.png'),
             title: "Favourites",
-            textStyle:
-                const TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
-            activeForegroundColor: AppColor.themeredcolor,
-          ),
-        ),
-        PersistentTabConfig(
-          screen: const AboutScreen(),
-          item: ItemConfig(
-            icon: Icon(Icons.info_outline),
-            title: "About",
-            textStyle:
-                const TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
-            activeForegroundColor: AppColor.themeredcolor,
-          ),
-        ),
-        PersistentTabConfig(
-          screen: const ContactUsScreen(),
-          item: ItemConfig(
-            icon: Icon(Icons.phone),
-            title: "Contact",
             textStyle:
                 const TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
             activeForegroundColor: AppColor.themeredcolor,
