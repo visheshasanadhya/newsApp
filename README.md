@@ -54,3 +54,23 @@ If you found this project useful, then please consider giving it a :star: on Git
 =======
 ## git push -f origin gh-pages
 >>>>>>> 856644a5fc927e65594fbad535bad1b9b40d1624
+
+
+
+-----------------------
+
+#gh pages command
+
+```bash #
+git checkout --orphan gh-pages
+git reset --hard
+git clean -fdx
+
+cp -r build/web/* .
+
+git add .
+git commit -m "Deploy web app to gh-pages"
+git push -f origin gh-pages
+
+
+```
