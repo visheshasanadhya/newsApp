@@ -72,5 +72,7 @@ git add .
 git commit -m "Deploy web app to gh-pages"
 git push -f origin gh-pages
 
+#force push
+git push -u origin gh-pages --force
 
 ```
