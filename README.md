@@ -76,3 +76,27 @@ git push -f origin gh-pages
 git push -u origin gh-pages --force
 
 ```
+
+
+
+
+-----------------------
+
+#gh pages command
+
+```bash #
+git checkout --orphan gh-pages
+git rm -rf .
+cp -r build/web/* .
+
+# del build after copying so use
+rm -rf build
+
+git add .
+git commit -m "Deploy web app to gh-pages"
+
+#force push
+git push -u origin gh-pages --force
+
+```
+
