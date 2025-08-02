@@ -85,18 +85,24 @@ git push -u origin gh-pages --force
 #gh pages command
 
 ```bash #
-git checkout --orphan gh-pages
+# Step 1: Build the web app with proper base href
+flutter build web --release --no-tree-shake-icons --base-href "/chatfy_flutter_firebase_chat_application/"
+
+# Step 2: Create and switch to gh-pages branch
+git checkout -B gh-pages
+
+# Step 3: Remove all existing files (if any)
 git rm -rf .
+
+# Step 4: Copy the build output to the root of the repo
 cp -r build/web/* .
 
-# del build after copying so use
-rm -rf build
-
+# Step 5: Add and commit changes
 git add .
-git commit -m "Deploy web app to gh-pages"
+git commit -m "Deploy web build to gh-pages"
 
-#force push
-git push -u origin gh-pages --force
+# Step 6: Push to gh-pages branch on GitHub
+git push -f origin gh-pages
 
 ```
 
