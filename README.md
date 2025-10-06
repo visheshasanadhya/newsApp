@@ -1,5 +1,5 @@
-# news_app
-
+# NewsApp 
+Release link - <https://visheshasanadhya.github.io/newsApp/>
 
 ## Some screenshots
 
